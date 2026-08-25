@@ -1,13 +1,8 @@
 # geo-tool-check
 
-Is this page readable for AI search? Checks crawler access, structure and
-citability for ChatGPT, Perplexity, Claude and Google AI — as a CLI and as an
-MCP server.
-
-**Everything runs on your machine.** No account, no API key, no data sent to
-geo-tool.com.
-
-## CLI
+**Is this page readable for AI search?** One command answers it: crawler
+access, structure, and citability for ChatGPT, Perplexity, Claude, and
+Google AI — scored 0–100 with concrete findings.
 
 ```bash
 npx geo-tool-check example.com
@@ -25,77 +20,35 @@ https://example.com/
   platformSpecific   20/20  ██████████████████
 ```
 
-### In CI
+**Everything runs on your machine.** No account, no API key, no telemetry —
+nothing is ever sent to geo-tool.com. The score is computed by the same engine
+as the free [website audit on geo-tool.com](https://www.geo-tool.com), so the
+number here matches the number there.
 
-```bash
-npx geo-tool-check https://example.com/pricing --min-score 70
-```
+## What you get
 
-Exit code 1 below the threshold. Catches the deploy that blocks GPTBot or
-hides the content behind JavaScript.
+- **CLI** — human-readable or `--json`, built for CI (`--min-score 70` fails
+  the build below 70; a blocked scored AI crawler fails `--crawlers`).
+- **MCP server** — three read-only tools for any MCP client (Claude, Cursor,
+  VS Code, Codex, …): `check_ai_readiness`, `check_ai_crawlers`,
+  `check_citability`. See [docs/mcp.md](docs/mcp.md).
+- **Zero runtime dependencies** — the MCP stdio protocol is implemented
+  directly. Node 18+ is all you need.
 
-```bash
-npx geo-tool-check example.com --crawlers   # only robots.txt, exits 1 if a scored crawler is blocked
-npx geo-tool-check example.com --json       # machine-readable
-npx geo-tool-check example.com --lang de    # German labels
-```
+## Quick start
 
-## MCP server
+| I want to…                              | Run                                                     |
+| --------------------------------------- | ------------------------------------------------------- |
+| Score a page                            | `npx geo-tool-check example.com`                        |
+| See which AI crawlers robots.txt blocks | `npx geo-tool-check example.com --crawlers`             |
+| Gate a deploy in CI                     | `npx geo-tool-check https://example.com --min-score 70` |
+| Use it from an AI agent (MCP)           | `npx geo-tool-check --mcp` — [setup guide](docs/mcp.md) |
 
-Gives an agent three tools for AI visibility.
-
-```json
-{
-  "mcpServers": {
-    "geo-tool-check": {
-      "command": "npx",
-      "args": ["-y", "geo-tool-check", "--mcp"]
-    }
-  }
-}
-```
-
-Or point directly at the binary: `npx -y geo-tool-check-mcp`.
-
-Also on [Smithery](https://smithery.ai/servers/tracktronaut/geo-tool-check):
-
-```bash
-npx -y smithery mcp add tracktronaut/geo-tool-check
-```
-
-To rebuild and republish the bundle:
-
-```bash
-npm run bundle                    # geo-tool-check.mcpb
-./scripts/publish-smithery.sh     # needs: smithery auth login
-```
-
-| Tool | What it does | Network |
-|---|---|---|
-| `check_ai_readiness` | Full page score, six categories, findings | fetches the page |
-| `check_ai_crawlers` | Which AI crawlers robots.txt blocks | fetches robots.txt |
-| `check_citability` | Scores a passage while drafting | none |
-
-## What the score means
-
-Twenty-five checks across six categories, 0 to 100. The same code that powers
-[geo-tool.com](https://www.geo-tool.com/en/geo-score) — the scoring logic is
-imported, not reimplemented, so both produce the same number for the same
-input.
-
-**Node executes no JavaScript.** This tool therefore reports what a plain HTML
-crawler sees — which is exactly what GPTBot, ClaudeBot and PerplexityBot see. A
-client-rendered page will score low here, and that is the finding, not a
-limitation. To compare the crawler's view against the rendered page, use the
-[browser extension](https://www.geo-tool.com/en/ext-report).
-
-There is deliberately no JavaScript rendering fallback: a paid rendering
-service is exactly the running cost this package must not create.
-
-## Zero dependencies
-
-The MCP protocol over stdio is JSON-RPC with three methods, implemented
-directly. Nothing to install beyond Node 18+, no supply chain, no version drift.
+More: [Getting started](docs/getting-started.md) ·
+[CLI reference](docs/cli.md) · [GitHub Actions](docs/github-actions.md) ·
+[How scoring works](docs/scoring.md) · [FAQ](docs/faq.md) ·
+[Troubleshooting](docs/troubleshooting.md) ·
+[Architecture](docs/architecture.md)
 
 ## Claude Code plugin
 
@@ -112,13 +65,18 @@ Then check any page with one command — works immediately, no restart needed:
 /geo-tool-check example.com
 ```
 
-You get the 0-100 readiness score, which AI crawlers robots.txt blocks, and a
-prioritized fix list. You can also just ask in plain language ("is example.com
-readable for AI search?") — after a restart the three MCP tools answer that
-directly. The full audit with concrete optimization actions is free at
-[geo-tool.com](https://www.geo-tool.com); the paid workspace additionally
-measures real AI answers (ChatGPT, Perplexity, Gemini) for your
-buying-intent questions daily.
+## Honest limits
+
+Node runs no JavaScript — and neither do GPTBot, ClaudeBot, or PerplexityBot.
+A client-rendered page that scores low here **is the finding, not a
+measurement gap**. To compare the crawler's view against the rendered page,
+use the [browser extension](https://www.geo-tool.com/en/ext-report).
+
+This checker measures whether a page **can** be read and cited. Whether AI
+systems actually mention your brand in real answers is a different
+measurement: the hosted [geo-tool.com workspace](https://www.geo-tool.com)
+checks real AI answers (ChatGPT, Perplexity, Gemini) for your buying-intent
+questions daily.
 
 ## Links
 
