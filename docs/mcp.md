@@ -37,8 +37,9 @@ doubt, your client's own MCP documentation wins over the snippets below.
 ## Client setup
 
 **Claude Desktop** — Settings → Developer → Edit Config, then add the
-canonical block to `claude_desktop_config.json` and restart. An `.mcpb`
-bundle for one-click install also exists (see the repository releases).
+canonical block to `claude_desktop_config.json` and restart. A one-click
+`.mcpb` desktop bundle can be built from this repository with
+`npm run bundle`.
 
 **Claude Code** — easiest via the plugin:
 
