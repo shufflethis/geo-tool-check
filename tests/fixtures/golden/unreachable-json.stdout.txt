@@ -1,0 +1,20 @@
+{
+  "url": "http://127.0.0.1:PORT/missing",
+  "reachable": false,
+  "httpStatus": 404,
+  "responseMs": 0,
+  "score": 0,
+  "readiness": "Unreachable",
+  "breakdown": [],
+  "findings": [
+    {
+      "id": "reachable",
+      "label": "Page reachable",
+      "status": "fail",
+      "detail": "The page responds with HTTP 404 — AI crawlers cannot read it."
+    }
+  ],
+  "blockedCrawlers": [],
+  "wordCount": 0,
+  "llmsTxt": false
+}

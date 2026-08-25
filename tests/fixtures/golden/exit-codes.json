@@ -1,0 +1,16 @@
+{
+  "check-json": 0,
+  "check-pretty": 0,
+  "check-de-json": 0,
+  "crawlers-json": 0,
+  "crawlers-pretty": 1,
+  "redirect-json": 0,
+  "unreachable-json": 0,
+  "unreachable-pretty": 0,
+  "min-score-fail": 1,
+  "min-score-pass": 0,
+  "min-score-unreachable": 1,
+  "help": 0,
+  "no-url": 2,
+  "bad-min-score": 2
+}

@@ -1,0 +1,149 @@
+{
+  "url": "http://127.0.0.1:PORT/redirect",
+  "reachable": true,
+  "httpStatus": 200,
+  "responseMs": 0,
+  "score": 71,
+  "readiness": "Fair",
+  "breakdown": [
+    {
+      "category": "directAnswers",
+      "score": 19,
+      "maxScore": 25
+    },
+    {
+      "category": "structure",
+      "score": 16,
+      "maxScore": 20
+    },
+    {
+      "category": "schemaMarkup",
+      "score": 15,
+      "maxScore": 15
+    },
+    {
+      "category": "citations",
+      "score": 5,
+      "maxScore": 15
+    },
+    {
+      "category": "multimedia",
+      "score": 2,
+      "maxScore": 5
+    },
+    {
+      "category": "platformSpecific",
+      "score": 14,
+      "maxScore": 20
+    }
+  ],
+  "findings": [
+    {
+      "id": "reachable",
+      "label": "Page reachable",
+      "status": "pass",
+      "detail": "HTTP 200 in N ms."
+    },
+    {
+      "id": "https",
+      "label": "HTTPS",
+      "status": "fail",
+      "detail": "Without HTTPS, AI search and browsers downgrade the page."
+    },
+    {
+      "id": "speed",
+      "label": "Response time",
+      "status": "pass",
+      "detail": "First response after N ms."
+    },
+    {
+      "id": "indexable",
+      "label": "Indexable",
+      "status": "pass",
+      "detail": "No noindex — the page may appear in search and AI answers."
+    },
+    {
+      "id": "ai-bots",
+      "label": "AI crawlers allowed",
+      "status": "fail",
+      "detail": "robots.txt fully blocks GPTBot — these AI search engines can never cite the page."
+    },
+    {
+      "id": "title",
+      "label": "Title tag",
+      "status": "pass",
+      "detail": "\"What does a GEO audit cost? | Example\" (37 characters)."
+    },
+    {
+      "id": "meta-description",
+      "label": "Meta-Description",
+      "status": "pass",
+      "detail": "79 characters."
+    },
+    {
+      "id": "h1",
+      "label": "Exactly one H1",
+      "status": "pass",
+      "detail": "The page has exactly one H1."
+    },
+    {
+      "id": "canonical",
+      "label": "Canonical",
+      "status": "warn",
+      "detail": "No canonical tag — duplicates can dilute citability."
+    },
+    {
+      "id": "schema",
+      "label": "Structured data (JSON-LD)",
+      "status": "pass",
+      "detail": "Detected types: FAQPage, Question, Answer — FAQPage is ideal for AI answers."
+    },
+    {
+      "id": "llms-txt",
+      "label": "llms.txt",
+      "status": "pass",
+      "detail": "llms.txt is present — AI crawlers get curated context."
+    },
+    {
+      "id": "content-volume",
+      "label": "Readable content",
+      "status": "warn",
+      "detail": "146 words — on client-side rendered pages crawlers may see almost nothing."
+    },
+    {
+      "id": "js-visibility",
+      "label": "Content readable without JavaScript",
+      "status": "pass",
+      "detail": "The content is in the delivered HTML (146 words) — readable without JavaScript."
+    },
+    {
+      "id": "viewport",
+      "label": "Mobile viewport",
+      "status": "warn",
+      "detail": "No viewport meta — mobile rendering is a baseline ranking signal."
+    },
+    {
+      "id": "suggestion",
+      "label": "AI crawlers allowed",
+      "status": "fail",
+      "detail": "robots.txt fully blocks GPTBot — these AI search engines can never cite the page."
+    },
+    {
+      "id": "suggestion",
+      "label": "FAQ section",
+      "status": "warn",
+      "detail": "No FAQ section — follow-up questions are the easiest way into additional AI answers."
+    },
+    {
+      "id": "suggestion",
+      "label": "Evidence & data",
+      "status": "warn",
+      "detail": "0 external links, 1 concrete numbers/prices — AI answers prefer pages with verifiable data."
+    }
+  ],
+  "blockedCrawlers": [
+    "GPTBot"
+  ],
+  "wordCount": 146,
+  "llmsTxt": true
+}

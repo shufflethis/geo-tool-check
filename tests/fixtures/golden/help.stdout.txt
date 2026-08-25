@@ -1,0 +1,24 @@
+geo-tool-check — is this page readable for AI search?
+
+Usage
+  npx geo-tool-check <url> [options]
+
+Options
+  --json                 Machine-readable output.
+  --min-score <0-100>    Exit with code 1 below this score. For CI.
+  --crawlers             Only check which AI crawlers robots.txt blocks.
+  --lang <de|en>         Language of labels and details. Default: en.
+  -h, --help             Show this help.
+
+Examples
+  npx geo-tool-check example.com
+  npx geo-tool-check https://example.com/pricing --min-score 70
+  npx geo-tool-check example.com --crawlers --json
+
+Every request goes from this machine straight to the target site. Nothing is
+sent to geo-tool.com, and no account is needed.
+
+The score is computed with the same code as https://www.geo-tool.com/en/geo-score.
+Node runs no JavaScript, so this reports what a plain HTML crawler sees — which
+is exactly what GPTBot, ClaudeBot and PerplexityBot see. To compare that against
+the rendered page, use the browser extension.

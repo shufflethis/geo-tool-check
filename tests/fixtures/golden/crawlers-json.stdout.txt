@@ -1,0 +1,83 @@
+{
+  "origin": "http://127.0.0.1:PORT",
+  "robotsTxtFound": true,
+  "crawlers": [
+    {
+      "token": "GPTBot",
+      "operator": "OpenAI",
+      "blocked": true,
+      "countsTowardScore": true,
+      "note": "Reads pages to train OpenAI models."
+    },
+    {
+      "token": "OAI-SearchBot",
+      "operator": "OpenAI",
+      "blocked": false,
+      "countsTowardScore": true,
+      "note": "Builds the index behind ChatGPT search. Blocking it means not appearing there."
+    },
+    {
+      "token": "ChatGPT-User",
+      "operator": "OpenAI",
+      "blocked": false,
+      "countsTowardScore": false,
+      "note": "Fetches a page when a person clicks the link inside a chat."
+    },
+    {
+      "token": "ClaudeBot",
+      "operator": "Anthropic",
+      "blocked": false,
+      "countsTowardScore": true,
+      "note": "Anthropic crawler for Claude — reads pages Claude can later cite."
+    },
+    {
+      "token": "PerplexityBot",
+      "operator": "Perplexity",
+      "blocked": false,
+      "countsTowardScore": true,
+      "note": "Crawler behind Perplexity answers and their source lists."
+    },
+    {
+      "token": "Google-Extended",
+      "operator": "Google",
+      "blocked": false,
+      "countsTowardScore": true,
+      "note": "Controls use by Gemini and AI Overviews. Blocking it does NOT remove you from normal Google Search — that is Googlebot."
+    },
+    {
+      "token": "Applebot-Extended",
+      "operator": "Apple",
+      "blocked": false,
+      "countsTowardScore": false,
+      "note": "Controls use by Apple Intelligence."
+    },
+    {
+      "token": "meta-externalagent",
+      "operator": "Meta",
+      "blocked": false,
+      "countsTowardScore": false,
+      "note": "Crawler for Meta AI, the assistant inside WhatsApp, Instagram and Facebook."
+    },
+    {
+      "token": "CCBot",
+      "operator": "Common Crawl",
+      "blocked": false,
+      "countsTowardScore": false,
+      "note": "Open dataset many models draw their training data from."
+    },
+    {
+      "token": "Amazonbot",
+      "operator": "Amazon",
+      "blocked": false,
+      "countsTowardScore": false,
+      "note": "Crawler for Alexa and Amazon assistant services."
+    },
+    {
+      "token": "Bytespider",
+      "operator": "ByteDance",
+      "blocked": false,
+      "countsTowardScore": false,
+      "note": "ByteDance crawler. Reported to partly ignore robots.txt — if you block it, block at server level too."
+    }
+  ]
+}
