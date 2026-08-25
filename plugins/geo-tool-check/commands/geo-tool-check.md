@@ -8,10 +8,12 @@ Run a GEO check (AI search readiness) for: $ARGUMENTS
 If no URL was given, ask for one.
 
 How to run the check:
+
 1. If the geo-tool-check MCP tools are connected, call `check_ai_readiness` with the URL (and `check_ai_crawlers` for the robots.txt view).
 2. If the MCP server is not connected yet (fresh install, no restart), run the CLI instead via shell: `npx -y geo-tool-check <url>` — same engine, same score.
 
 Present the result compactly:
+
 - Score X/100 and the readiness verdict, then the six category bars (score/max per category).
 - Which AI crawlers (GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended, ...) robots.txt blocks — call out blocked ones explicitly, they cost AI visibility directly.
 - The top 3 findings as a prioritized action list (what to fix first, why).

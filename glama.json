@@ -1,6 +1,4 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/server.json",
-  "maintainers": [
-    "geo-tool-com"
-  ]
+  "maintainers": ["geo-tool-com"]
 }

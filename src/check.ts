@@ -9,11 +9,7 @@
 // Das ist keine Einschraenkung, sondern die richtige Perspektive — ein
 // KI-Crawler fuehrt ebenfalls kein JavaScript aus und sieht genau das hier.
 
-import {
-  evaluateTechnicalFindings,
-  evaluateUnreachable,
-  type PageEvidence,
-} from './core/evaluate'
+import { evaluateTechnicalFindings, evaluateUnreachable, type PageEvidence } from './core/evaluate'
 import { buildAnalysisResult } from './core/build-analysis'
 import { robotsBlocksAiBots, stripTags } from './core/pure'
 import { AI_CRAWLERS, AI_CRAWLER_TOKENS } from './core/ai-crawlers'
