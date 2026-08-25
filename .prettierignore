@@ -1,0 +1,7 @@
+# Vendored scoring core: kept byte-identical to the geo-tool.com monorepo
+# source so the two copies can be diffed and synced. Do not reformat.
+src/core/
+dist/
+node_modules/
+package-lock.json
+tests/fixtures/golden/

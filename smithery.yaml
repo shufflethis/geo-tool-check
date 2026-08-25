@@ -16,8 +16,7 @@ startCommand:
     type: object
     required: []
     properties: {}
-  commandFunction:
-    |-
+  commandFunction: |-
     (config) => ({
       "command": "npx",
       "args": ["-y", "geo-tool-check@latest", "--mcp"]

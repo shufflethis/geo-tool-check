@@ -1,0 +1,29 @@
+
+http://127.0.0.1:PORT/
+71/100  Fair  146 words · N ms
+
+  directAnswers      19/25  ██████████████░░░░
+  structure          16/20  ██████████████░░░░
+  schemaMarkup       15/15  ██████████████████
+  citations           5/15  ██████░░░░░░░░░░░░
+  multimedia          2/5   ███████░░░░░░░░░░░
+  platformSpecific   14/20  █████████████░░░░░
+
+  What is in the way
+  ✕ HTTPS
+    Without HTTPS, AI search and browsers downgrade the page.
+  ✕ AI crawlers allowed
+    robots.txt fully blocks GPTBot — these AI search engines can never cite the page.
+  ! Canonical
+    No canonical tag — duplicates can dilute citability.
+  ! Readable content
+    146 words — on client-side rendered pages crawlers may see almost nothing.
+  ! Mobile viewport
+    No viewport meta — mobile rendering is a baseline ranking signal.
+  ✕ AI crawlers allowed
+    robots.txt fully blocks GPTBot — these AI search engines can never cite the page.
+
+  Blocked crawlers: GPTBot
+
+  Full report: https://www.geo-tool.com/en/geo-score
+

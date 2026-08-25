@@ -1,0 +1,149 @@
+{
+  "url": "http://127.0.0.1:PORT/",
+  "reachable": true,
+  "httpStatus": 200,
+  "responseMs": 0,
+  "score": 71,
+  "readiness": "Befriedigend",
+  "breakdown": [
+    {
+      "category": "directAnswers",
+      "score": 19,
+      "maxScore": 25
+    },
+    {
+      "category": "structure",
+      "score": 16,
+      "maxScore": 20
+    },
+    {
+      "category": "schemaMarkup",
+      "score": 15,
+      "maxScore": 15
+    },
+    {
+      "category": "citations",
+      "score": 5,
+      "maxScore": 15
+    },
+    {
+      "category": "multimedia",
+      "score": 2,
+      "maxScore": 5
+    },
+    {
+      "category": "platformSpecific",
+      "score": 14,
+      "maxScore": 20
+    }
+  ],
+  "findings": [
+    {
+      "id": "reachable",
+      "label": "Seite erreichbar",
+      "status": "pass",
+      "detail": "HTTP 200 in N ms."
+    },
+    {
+      "id": "https",
+      "label": "HTTPS",
+      "status": "fail",
+      "detail": "Ohne HTTPS werten KI-Suchen und Browser die Seite ab."
+    },
+    {
+      "id": "speed",
+      "label": "Antwortzeit",
+      "status": "pass",
+      "detail": "Erste Antwort nach N ms."
+    },
+    {
+      "id": "indexable",
+      "label": "Indexierbar",
+      "status": "pass",
+      "detail": "Kein noindex — die Seite darf in Suche und KI-Antworten erscheinen."
+    },
+    {
+      "id": "ai-bots",
+      "label": "KI-Crawler erlaubt",
+      "status": "fail",
+      "detail": "robots.txt sperrt GPTBot komplett aus — diese KI-Suchen können die Seite nie zitieren."
+    },
+    {
+      "id": "title",
+      "label": "Title-Tag",
+      "status": "pass",
+      "detail": "\"What does a GEO audit cost? | Example\" (37 Zeichen)."
+    },
+    {
+      "id": "meta-description",
+      "label": "Meta-Description",
+      "status": "pass",
+      "detail": "79 Zeichen."
+    },
+    {
+      "id": "h1",
+      "label": "Genau eine H1",
+      "status": "pass",
+      "detail": "Die Seite hat genau eine H1."
+    },
+    {
+      "id": "canonical",
+      "label": "Canonical",
+      "status": "warn",
+      "detail": "Kein Canonical-Tag — Duplikate können die Zitierfähigkeit verwässern."
+    },
+    {
+      "id": "schema",
+      "label": "Strukturierte Daten (JSON-LD)",
+      "status": "pass",
+      "detail": "Gefundene Typen: FAQPage, Question, Answer — FAQPage ist ideal für KI-Antworten."
+    },
+    {
+      "id": "llms-txt",
+      "label": "llms.txt",
+      "status": "pass",
+      "detail": "llms.txt ist vorhanden — KI-Crawler bekommen kuratierten Kontext."
+    },
+    {
+      "id": "content-volume",
+      "label": "Lesbarer Inhalt",
+      "status": "warn",
+      "detail": "146 Wörter — bei client-seitig gerenderten Seiten sehen Crawler ggf. fast nichts."
+    },
+    {
+      "id": "js-visibility",
+      "label": "Inhalt ohne JavaScript lesbar",
+      "status": "pass",
+      "detail": "Der Inhalt steht im ausgelieferten HTML (146 Wörter) — auch ohne JavaScript lesbar."
+    },
+    {
+      "id": "viewport",
+      "label": "Mobile Viewport",
+      "status": "warn",
+      "detail": "Kein Viewport-Meta — Mobil-Darstellung ist ein Ranking-Basissignal."
+    },
+    {
+      "id": "suggestion",
+      "label": "KI-Crawler erlaubt",
+      "status": "fail",
+      "detail": "robots.txt sperrt GPTBot komplett aus — diese KI-Suchen können die Seite nie zitieren."
+    },
+    {
+      "id": "suggestion",
+      "label": "FAQ-Bereich",
+      "status": "warn",
+      "detail": "Kein FAQ-Bereich — Folgefragen sind der einfachste Weg in zusätzliche KI-Antworten."
+    },
+    {
+      "id": "suggestion",
+      "label": "Belege & Daten",
+      "status": "warn",
+      "detail": "0 externe Links, 1 konkrete Zahlen/Preise — KI-Antworten bevorzugen Seiten mit überprüfbaren Daten."
+    }
+  ],
+  "blockedCrawlers": [
+    "GPTBot"
+  ],
+  "wordCount": 146,
+  "llmsTxt": true
+}

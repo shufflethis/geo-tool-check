@@ -1,0 +1,1 @@
+geo-tool-check: No URL given. Try: npx geo-tool-check example.com

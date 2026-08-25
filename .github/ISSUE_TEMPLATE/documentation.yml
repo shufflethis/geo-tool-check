@@ -1,0 +1,17 @@
+name: Documentation issue
+description: Something in the README or docs/ is wrong, unclear, or missing
+labels: [documentation]
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Which page?
+      placeholder: docs/mcp.md
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: What is wrong or missing?
+    validations:
+      required: true

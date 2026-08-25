@@ -1,0 +1,1 @@
+geo-tool-check: --min-score needs a number between 0 and 100.

@@ -1,0 +1,1 @@
+geo-tool-check: score 0 is below --min-score 10

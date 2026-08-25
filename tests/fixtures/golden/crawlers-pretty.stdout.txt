@@ -1,0 +1,14 @@
+
+http://127.0.0.1:PORT
+  GPTBot               blocked  OpenAI
+  OAI-SearchBot        allowed  OpenAI
+  ChatGPT-User         allowed  OpenAI
+  ClaudeBot            allowed  Anthropic
+  PerplexityBot        allowed  Perplexity
+  Google-Extended      allowed  Google
+  Applebot-Extended    allowed  Apple
+  meta-externalagent   allowed  Meta
+  CCBot                allowed  Common Crawl
+  Amazonbot            allowed  Amazon
+  Bytespider           allowed  ByteDance
+

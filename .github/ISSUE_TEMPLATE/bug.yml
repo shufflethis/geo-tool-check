@@ -1,0 +1,34 @@
+name: Bug report
+description: Something behaves incorrectly in the CLI or MCP server
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: Please do NOT report security issues here — see SECURITY.md instead.
+  - type: input
+    id: version
+    attributes:
+      label: geo-tool-check version
+      placeholder: npx geo-tool-check --help (header) or npm ls geo-tool-check
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node.js version
+      placeholder: node --version
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Exact command or MCP call
+      placeholder: npx geo-tool-check https://example.com --json
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect, and what happened instead?
+    validations:
+      required: true
