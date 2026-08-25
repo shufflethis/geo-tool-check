@@ -52,10 +52,10 @@
     "bundle": "node build.mjs && npx -y @anthropic-ai/mcpb@2 pack . geo-tool-check.mcpb"
   },
   "devDependencies": {
-    "@eslint/js": "9.19.0",
+    "@eslint/js": "9.39.5",
     "@types/node": "22.10.10",
     "esbuild": "0.25.12",
-    "eslint": "9.19.0",
+    "eslint": "9.39.5",
     "prettier": "3.4.2",
     "typescript": "5.7.3",
     "typescript-eslint": "8.22.0",
