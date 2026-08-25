@@ -1,0 +1,24 @@
+# Smithery-Konfiguration (aelterer, repo-basierter Weg).
+#
+# Der in der aktuellen Doku beschriebene Weg ist ein MCPB-Bundle:
+#   npm run bundle   ->  geo-tool-check.mcpb
+#   smithery mcp publish ./geo-tool-check.mcpb -n <namespace>/geo-tool-check
+# Diese Datei bleibt liegen, weil der repo-basierte Weg bei vielen Servern noch
+# greift und nichts kostet.
+#
+# Der Server braucht keinen API-Schluessel und keine Anmeldung — alle Pruefungen
+# laufen auf dem Rechner des Nutzers, kein Aufruf geht an geo-tool.com. Deshalb
+# ist configSchema leer: es gibt nichts zu konfigurieren.
+
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: []
+    properties: {}
+  commandFunction:
+    |-
+    (config) => ({
+      "command": "npx",
+      "args": ["-y", "geo-tool-check@latest", "--mcp"]
+    })

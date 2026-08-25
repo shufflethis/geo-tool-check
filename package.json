@@ -1,0 +1,49 @@
+{
+  "name": "geo-tool-check",
+  "version": "1.0.0",
+  "description": "Is this page readable for AI search? Checks crawler access, structure and citability for ChatGPT, Perplexity, Claude and Google AI. CLI and MCP server, runs entirely on your machine.",
+  "keywords": [
+    "geo",
+    "generative-engine-optimization",
+    "ai-search",
+    "seo",
+    "gptbot",
+    "robots-txt",
+    "llms-txt",
+    "mcp",
+    "mcp-server",
+    "chatgpt",
+    "perplexity"
+  ],
+  "homepage": "https://www.geo-tool.com/en/developers",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shufflethis/geo-tool-check.git"
+  },
+  "bugs": {
+    "url": "https://www.geo-tool.com/en/contact"
+  },
+  "license": "MIT",
+  "author": "track by track GmbH (https://www.geo-tool.com)",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "bin": {
+    "geo-tool-check": "dist/cli.js",
+    "geo-tool-check-mcp": "dist/mcp.js"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "manifest.json"
+  ],
+  "scripts": {
+    "build": "node build.mjs",
+    "prepublishOnly": "node build.mjs",
+    "bundle": "node build.mjs && npx -y @anthropic-ai/mcpb@2 pack . geo-tool-check.mcpb"
+  },
+  "devDependencies": {
+    "esbuild": "^0.24.0"
+  }
+}

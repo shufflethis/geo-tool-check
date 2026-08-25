@@ -1,0 +1,46 @@
+{
+  "manifest_version": "0.2",
+  "name": "geo-tool-check",
+  "display_name": "GEO Check — AI search readiness",
+  "version": "1.0.0",
+  "description": "Check whether a page can be read and cited by ChatGPT, Perplexity, Claude and Google AI. Runs entirely on this machine — no API key, no account.",
+  "long_description": "Three tools for AI search visibility. check_ai_readiness scores a public page across six categories using the same code that powers geo-tool.com. check_ai_crawlers reads a domain's robots.txt and reports which AI crawlers are blocked. check_citability scores a passage while drafting, without any network request.\n\nEvery fetch goes from this machine straight to the target site; nothing is sent to geo-tool.com. Node executes no JavaScript, so the result reflects what a plain HTML crawler sees — which is exactly what GPTBot, ClaudeBot and PerplexityBot see.",
+  "author": {
+    "name": "track by track GmbH",
+    "url": "https://www.geo-tool.com"
+  },
+  "homepage": "https://www.geo-tool.com/en/developers",
+  "documentation": "https://www.npmjs.com/package/geo-tool-check",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shufflethis/geo-tool-frontend"
+  },
+  "license": "MIT",
+  "keywords": ["geo", "ai-search", "seo", "gptbot", "robots-txt", "llms-txt", "chatgpt", "perplexity", "citability"],
+  "server": {
+    "type": "node",
+    "entry_point": "dist/mcp.js",
+    "mcp_config": {
+      "command": "node",
+      "args": ["${__dirname}/dist/mcp.js"],
+      "env": {}
+    }
+  },
+  "tools": [
+    {
+      "name": "check_ai_readiness",
+      "description": "Score a public web page on whether AI search systems can read, understand and cite it. Returns 0-100 across six categories plus findings."
+    },
+    {
+      "name": "check_ai_crawlers",
+      "description": "Read a domain's robots.txt and report which AI crawlers are fully blocked — GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot, Google-Extended and others."
+    },
+    {
+      "name": "check_citability",
+      "description": "Score a passage of text or HTML on how likely an AI answer is to quote it. Makes no network request."
+    }
+  ],
+  "compatibility": {
+    "runtimes": { "node": ">=18.0.0" }
+  }
+}
