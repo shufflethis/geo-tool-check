@@ -35,7 +35,14 @@ try {
 
   // 2. Tarball contents: required files in, development files out
   const shipped = packInfo.files.map((file) => file.path)
-  for (const required of ['dist/cli.js', 'dist/mcp.js', 'README.md', 'manifest.json', 'package.json', 'LICENSE']) {
+  for (const required of [
+    'dist/cli.js',
+    'dist/mcp.js',
+    'README.md',
+    'manifest.json',
+    'package.json',
+    'LICENSE',
+  ]) {
     assert(shipped.includes(required), `tarball contains ${required}`)
   }
   const leaks = shipped.filter(
@@ -79,7 +86,10 @@ try {
   })
   const initialize = JSON.parse(mcpReply.trim().split('\n')[0])
   assert(initialize.result?.serverInfo?.name === 'geo-tool-check', 'packaged MCP server initializes')
-  assert(initialize.result?.serverInfo?.version === installedPkg.version, 'MCP server reports the package version')
+  assert(
+    initialize.result?.serverInfo?.version === installedPkg.version,
+    'MCP server reports the package version'
+  )
 
   // 5. Cost-leak guard on the shipped bundles
   for (const file of ['dist/cli.js', 'dist/mcp.js']) {
