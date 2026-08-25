@@ -1,0 +1,13 @@
+{
+  "name": "geo-tool-check",
+  "version": "1.0.1",
+  "description": "AI search readiness checks (GEO): score any public page 0-100, see which AI crawlers robots.txt blocks, and score draft passages for citability. Same engine as geo-tool.com, runs locally, no account.",
+  "author": {
+    "name": "track by track GmbH",
+    "url": "https://www.geo-tool.com"
+  },
+  "homepage": "https://www.geo-tool.com/en/developers",
+  "repository": "https://github.com/shufflethis/geo-tool-check",
+  "license": "MIT",
+  "keywords": ["geo", "seo", "ai-search", "robots-txt", "llms-txt", "citability"]
+}

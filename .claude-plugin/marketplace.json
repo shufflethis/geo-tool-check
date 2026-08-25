@@ -1,0 +1,16 @@
+{
+  "name": "geo-tool",
+  "description": "Free GEO tools by geo-tool.com: check whether pages are readable and citable for AI search (ChatGPT, Perplexity, Claude, Google AI).",
+  "owner": {
+    "name": "track by track GmbH",
+    "url": "https://www.geo-tool.com"
+  },
+  "plugins": [
+    {
+      "name": "geo-tool-check",
+      "source": "./plugins/geo-tool-check",
+      "version": "1.0.1",
+      "description": "Is this page readable for AI search? Three read-only MCP tools: 0-100 readiness score, AI crawler access via robots.txt, and citability scoring for drafts. Runs entirely locally via npx, no account, no API key."
+    }
+  ]
+}

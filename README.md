@@ -97,6 +97,15 @@ service is exactly the running cost this package must not create.
 The MCP protocol over stdio is JSON-RPC with three methods, implemented
 directly. Nothing to install beyond Node 18+, no supply chain, no version drift.
 
+## Claude Code plugin
+
+```
+/plugin marketplace add shufflethis/geo-tool-check
+/plugin install geo-tool-check@geo-tool
+```
+
+Installs the MCP server (three read-only tools) via npx — nothing else to configure.
+
 ## Links
 
 - npm: [geo-tool-check](https://www.npmjs.com/package/geo-tool-check)
