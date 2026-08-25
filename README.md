@@ -102,7 +102,7 @@ directly. Nothing to install beyond Node 18+, no supply chain, no version drift.
 Install once:
 
 ```
-/plugin marketplace add shufflethis/geo-tool-check
+/plugin marketplace add geo-tool-com/geo-tool-check
 /plugin install geo-tool-check@geo-tool
 ```
 

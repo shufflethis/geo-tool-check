@@ -3,7 +3,7 @@
   "name": "io.github.shufflethis/geo-tool-check",
   "description": "Is this page readable for AI search? Crawler access, structure and citability checks, runs locally.",
   "repository": {
-    "url": "https://github.com/shufflethis/geo-tool-check",
+    "url": "https://github.com/geo-tool-com/geo-tool-check",
     "source": "github"
   },
   "version": "1.0.1",

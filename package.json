@@ -18,7 +18,7 @@
   "homepage": "https://www.geo-tool.com/en/developers",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shufflethis/geo-tool-check.git"
+    "url": "git+https://github.com/geo-tool-com/geo-tool-check.git"
   },
   "bugs": {
     "url": "https://www.geo-tool.com/en/contact"
