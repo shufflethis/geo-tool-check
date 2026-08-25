@@ -1,0 +1,17 @@
+name: Feature request
+description: Propose an improvement to the checker, CLI, or MCP server
+labels: [enhancement]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed behavior
+      description: Note that scoring weights and methodology are maintained in the geo-tool.com engine and do not change here.
+    validations:
+      required: true
