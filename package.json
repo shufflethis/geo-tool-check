@@ -1,6 +1,6 @@
 {
   "name": "geo-tool-check",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Is this page readable for AI search? Checks crawler access, structure and citability for ChatGPT, Perplexity, Claude and Google AI. CLI and MCP server, runs entirely on your machine.",
   "keywords": [
     "geo",
@@ -45,5 +45,6 @@
   },
   "devDependencies": {
     "esbuild": "^0.24.0"
-  }
+  },
+  "mcpName": "io.github.shufflethis/geo-tool-check"
 }

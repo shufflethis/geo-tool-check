@@ -1,0 +1,22 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-09-29/server.schema.json",
+  "name": "io.github.shufflethis/geo-tool-check",
+  "description": "Is this page readable for AI search? Checks crawler access, structure and citability for ChatGPT, Perplexity, Claude and Google AI. Runs entirely locally, zero dependencies.",
+  "repository": {
+    "url": "https://github.com/shufflethis/geo-tool-check",
+    "source": "github"
+  },
+  "version": "1.0.1",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "geo-tool-check",
+      "version": "1.0.1",
+      "transport": { "type": "stdio" },
+      "packageArguments": [
+        { "type": "positional", "value": "--mcp" }
+      ]
+    }
+  ]
+}
