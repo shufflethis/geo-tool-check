@@ -9,7 +9,7 @@
     {
       "name": "geo-tool-check",
       "source": "./plugins/geo-tool-check",
-      "version": "1.0.1",
+      "version": "1.1.0",
       "description": "Is this page readable for AI search? Three read-only MCP tools: 0-100 readiness score, AI crawler access via robots.txt, and citability scoring for drafts. Runs entirely locally via npx, no account, no API key."
     }
   ]

@@ -99,12 +99,26 @@ directly. Nothing to install beyond Node 18+, no supply chain, no version drift.
 
 ## Claude Code plugin
 
+Install once:
+
 ```
 /plugin marketplace add shufflethis/geo-tool-check
 /plugin install geo-tool-check@geo-tool
 ```
 
-Installs the MCP server (three read-only tools) via npx — nothing else to configure.
+Then check any page with one command — works immediately, no restart needed:
+
+```
+/geo-tool-check example.com
+```
+
+You get the 0-100 readiness score, which AI crawlers robots.txt blocks, and a
+prioritized fix list. You can also just ask in plain language ("is example.com
+readable for AI search?") — after a restart the three MCP tools answer that
+directly. The full audit with concrete optimization actions is free at
+[geo-tool.com](https://www.geo-tool.com); the paid workspace additionally
+measures real AI answers (ChatGPT, Perplexity, Gemini) for your
+buying-intent questions daily.
 
 ## Links
 
