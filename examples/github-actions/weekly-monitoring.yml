@@ -1,0 +1,24 @@
+# Scores your key pages every Monday morning; a page dropping below the
+# threshold turns the workflow red. Docs: ../../docs/github-actions.md
+name: Weekly GEO monitoring
+
+on:
+  schedule:
+    - cron: '0 6 * * 1' # Mondays 06:00 UTC
+  workflow_dispatch:
+
+jobs:
+  weekly-geo:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        url:
+          - https://example.com/
+          - https://example.com/pricing
+          - https://example.com/blog/most-important-post
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npx -y geo-tool-check ${{ matrix.url }} --min-score 70

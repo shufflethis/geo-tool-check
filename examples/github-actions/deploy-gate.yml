@@ -1,0 +1,22 @@
+# Fails the job when the deployed page scores below 70 for AI readability
+# or when robots.txt blocks a scored AI crawler (GPTBot, ClaudeBot, …).
+# Docs: ../../docs/github-actions.md
+name: GEO readiness gate
+
+on:
+  deployment_status:
+
+jobs:
+  geo-check:
+    if: github.event.deployment_status.state == 'success'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Readiness gate (exit 1 below 70)
+        run: npx -y geo-tool-check ${{ github.event.deployment_status.environment_url }} --min-score 70
+
+      - name: AI crawlers must not be blocked
+        run: npx -y geo-tool-check ${{ github.event.deployment_status.environment_url }} --crawlers

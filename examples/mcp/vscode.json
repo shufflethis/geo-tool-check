@@ -1,0 +1,8 @@
+{
+  "servers": {
+    "geo-tool-check": {
+      "command": "npx",
+      "args": ["-y", "geo-tool-check", "--mcp"]
+    }
+  }
+}

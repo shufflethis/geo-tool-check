@@ -70,6 +70,32 @@ args = ["-y", "geo-tool-check", "--mcp"]
 **Any other JSON-configured client** — use the canonical block; the server
 speaks plain stdio JSON-RPC (initialize, tools/list, tools/call, ping).
 
+Ready-to-copy config files for all of these live in
+[`examples/mcp/`](../examples/mcp/).
+
+## Registry entry
+
+The server is listed in the official
+[MCP Registry](https://registry.modelcontextprotocol.io) as
+`io.github.shufflethis/geo-tool-check` — clients that resolve servers from
+the registry can install it by that name. The registry metadata is mirrored
+in [`server.json`](../server.json) in this repository.
+
+## Hosted alternative (no install)
+
+If your client speaks **Streamable HTTP** to remote MCP servers, the same
+three tools are also hosted at:
+
+```
+https://www.geo-tool.com/mcp
+```
+
+The trade-off is the exact inverse of the npm package: nothing to install,
+but page fetches then run through geo-tool.com's infrastructure instead of
+your machine, and the endpoint is rate-limited (30 calls/hour per IP).
+Choose the hosted endpoint for convenience, the local package for privacy
+and unlimited use.
+
 ## The three tools
 
 | Tool                 | Arguments                  | What it answers                                                           |
