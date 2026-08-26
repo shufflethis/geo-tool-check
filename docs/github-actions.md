@@ -60,6 +60,9 @@ jobs:
       - run: npx -y geo-tool-check ${{ matrix.url }} --min-score 70
 ```
 
+Complete workflow files to copy:
+[`examples/github-actions/`](../examples/github-actions/).
+
 ## Notes
 
 - The runner fetches your page directly — no third-party service, no secrets.

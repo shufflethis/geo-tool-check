@@ -44,7 +44,8 @@ number here matches the number there.
 | Gate a deploy in CI                     | `npx geo-tool-check https://example.com --min-score 70` |
 | Use it from an AI agent (MCP)           | `npx geo-tool-check --mcp` — [setup guide](docs/mcp.md) |
 
-More: [Getting started](docs/getting-started.md) ·
+More: [Copy-paste examples](examples/) ·
+[Getting started](docs/getting-started.md) ·
 [CLI reference](docs/cli.md) · [GitHub Actions](docs/github-actions.md) ·
 [How scoring works](docs/scoring.md) · [FAQ](docs/faq.md) ·
 [Troubleshooting](docs/troubleshooting.md) ·
